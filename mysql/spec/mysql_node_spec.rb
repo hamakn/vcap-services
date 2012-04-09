@@ -171,6 +171,9 @@ describe "Mysql server node" do
       (before_ins_list.sort == after_ins_list.sort).should be_true
 
       before_bind_list = @node.all_bindings_list
+      before_bind_list.map {|item| item["name"]}.include?(nil).should be_false
+      before_bind_list.map {|item| item["username"] || item["user"]}.include?(nil).should be_false
+
       tmp_credential = @node.bind(tmp_db["name"],  @default_opts)
       @test_dbs[tmp_db] << tmp_credential
       after_bind_list = @node.all_bindings_list
