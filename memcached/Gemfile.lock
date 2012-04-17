@@ -165,4 +165,4 @@ DEPENDENCIES
   uuidtools
   vcap_common (>= 1.0.8)
   vcap_logging (>= 1.0.0)
-  vcap_services_base
+  vcap_services_base (<= 0.1.7)

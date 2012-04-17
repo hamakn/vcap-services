@@ -13,7 +13,7 @@ gem "dm-sqlite-adapter"
 
 gem 'vcap_common', '>= 1.0.8', :require => ['vcap/common', 'vcap/component']
 gem 'vcap_logging', '>=1.0.0', :require => ['vcap/logging']
-gem 'vcap_services_base'
+gem 'vcap_services_base', '<= 0.1.7'
 
 group :test do
   gem "rake"
